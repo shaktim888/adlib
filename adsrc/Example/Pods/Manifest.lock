@@ -1,0 +1,16 @@
+PODS:
+  - adsrc (0.1.0)
+
+DEPENDENCIES:
+  - adsrc (from `../`)
+
+EXTERNAL SOURCES:
+  adsrc:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  adsrc: 28a9a2b286f01f30e8264e41066b313bda96b729
+
+PODFILE CHECKSUM: 54dbe388f0e394ff5923c4dc9ab6f566282d69e8
+
+COCOAPODS: 1.8.4

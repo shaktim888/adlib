@@ -1,0 +1,33 @@
+{
+  "name": "adlib",
+  "version": "0.1.0",
+  "summary": "A short description of adlib.",
+  "description": "TODO: Add long description of the pod here.",
+  "resources": [
+    "BUAD/BUAdSDK.bundle"
+  ],
+  "homepage": "https://github.com/admin@qq.com/adlib",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "admin@qq.com": "admin@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/admin@qq.com/adlib.git",
+    "tag": "0.1.0"
+  },
+  "vendored_frameworks": "BUAD/*.framework",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "adlib/Classes/**/*",
+  "public_header_files": "adlib/Classes/AdHelper.h",
+  "libraries": [
+    "c++",
+    "sqlite3",
+    "resolv"
+  ],
+  "frameworks": "CoreMotion"
+}

@@ -1,0 +1,6 @@
+framework module adlib {
+  umbrella header "adlib-umbrella.h"
+
+  export *
+  module * { export * }
+}

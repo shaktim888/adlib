@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'adlib_Example' do
+  pod 'adlib', :path => '../'
+
+  target 'adlib_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

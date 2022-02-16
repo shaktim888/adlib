@@ -1,0 +1,13 @@
+#use_frameworks!
+
+platform :ios, '8.0'
+
+target 'adsrc_Example' do
+  pod 'adsrc', :path => '../'
+
+  target 'adsrc_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

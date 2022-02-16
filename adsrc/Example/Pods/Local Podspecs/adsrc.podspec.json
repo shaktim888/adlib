@@ -1,0 +1,38 @@
+{
+  "name": "adsrc",
+  "version": "0.1.0",
+  "summary": "A short description of adsrc.",
+  "description": "TODO: Add long description of the pod here.",
+  "resources": [
+    "BUAD/BUAdSDK.bundle"
+  ],
+  "homepage": "https://github.com/admin@qq.com/adsrc",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "admin@qq.com": "admin@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/admin@qq.com/adsrc.git",
+    "tag": "0.1.0"
+  },
+  "vendored_frameworks": "BUAD/*.framework",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "adsrc/Classes/**/*",
+  "public_header_files": "adsrc/Classes/AdHelper.h",
+  "libraries": [
+    "c++",
+    "sqlite3",
+    "resolv"
+  ],
+  "script_phases": {
+    "name": "rebuild_a",
+    "script": "  FMK_NAME=${PROJECT_NAME}\n  if [ \"${ACTION}\" = \"build\" ]\n    then\n    INSTALL_DIR=${SRCROOT}/Products/adsrc\n    DEVICE_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphoneos/adsrc\n    SIMULATOR_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphonesimulator/adsrc\n    \n    # -configuration ${CONFIGURATION}\n    # Clean and Building both architectures.\n    #xcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\n    #xcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n    \n    if [ -d \"${INSTALL_DIR}\" ]\n      then\n      rm -rf \"${INSTALL_DIR}\"\n    fi\n    mkdir -p \"${INSTALL_DIR}\"\n    cp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n    #ditto \"${DEVICE_DIR}/Headers\" \"${INSTALL_DIR}/Headers\"\n    lipo -create \"${DEVICE_DIR}/libadsrc.a\" \"${SIMULATOR_DIR}/libadsrc.a\" -output \"${INSTALL_DIR}/libadsrc.a\"\n    #这个是合并完成后打开对应的文件夹，你就可以直接看到文件了\n    open \"${SRCROOT}/Products/adsrc\"\n  fi\n",
+    "execution_position": "after_compile"
+  },
+  "frameworks": "CoreMotion"
+}

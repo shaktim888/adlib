@@ -1,0 +1,16 @@
+PODS:
+  - adlib (0.1.0)
+
+DEPENDENCIES:
+  - adlib (from `../`)
+
+EXTERNAL SOURCES:
+  adlib:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  adlib: fe621e8697ef26d4a8c81c933e350201fed3e4b8
+
+PODFILE CHECKSUM: b9a0ca6057893d0b3b4cd7873c7903b0d79f6732
+
+COCOAPODS: 1.8.4
